@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <h1 class="h3 text-center mt-3 mb-5">Par ou Ímpar?</h1>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Informe um número:</label>
+    <input type="number" class="form-control" id="exampleFormControlInput1"[(ngModel)]="number">
+  </div>
+
+  <div *ngIf="isEven() && number">
+    O número {{number}} é <span class="fw-bold">par</span>
+  </div>
+
+  <div *ngIf="isOdd() && number">
+    O número {{number}} é <span class="fw-bold">ímpar</span>
+  </div>
+
+</div>
